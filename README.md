@@ -1,6 +1,10 @@
 # devtrails-phase1
 ## Adversarial Defense & Anti-Spoofing Strategy
 
+Our system uses a multi-layer AI-driven trust scoring mechanism combining behavioral analysis, sensor fusion, environmental validation, and fraud clustering to detect GPS spoofing while ensuring fairness for genuine users.
+
+---
+
 ### 1. Differentiation
 
 Our system replaces single-point GPS validation with a multi-layer trust-based architecture to distinguish genuine delivery partners from spoofing attackers.
@@ -11,7 +15,7 @@ We also apply sensor fusion by combining GPS data with accelerometer and gyrosco
 
 Additionally, we cross-verify environmental conditions using external weather APIs and nearby user data. If a user claims to be in a high-risk weather zone but surrounding users do not show similar conditions, the claim is flagged.
 
-Each user is assigned a dynamic trust score based on these checks, which determines the risk level of the claim.
+Each user is assigned a dynamic trust score (0–100) based on these checks, which determines the risk level of the claim.
 
 ---
 
@@ -25,6 +29,7 @@ To detect fraud effectively, our system analyzes multiple data sources beyond GP
 - Temporal patterns like repeated claims in short durations  
 - Behavioral history including past routes and delivery activity  
 - Cluster data to detect multiple users making similar claims simultaneously  
+- Graph-based fraud detection to identify coordinated groups of users exhibiting similar spoofing patterns in real-time  
 
 We also use clustering techniques to identify coordinated fraud rings where multiple users exhibit identical suspicious patterns in the same region and timeframe.
 
@@ -46,4 +51,4 @@ The system also maintains transparency by informing users when their claim is un
 
 ### Summary
 
-Our approach uses a multi-layer AI-driven trust scoring system combining behavioral analysis, sensor fusion, environmental validation, and fraud clustering to accurately detect spoofing attacks while maintaining a fair and user-friendly experience.
+Our approach uses a multi-layer AI-driven trust scoring system combining behavioral analysis, sensor fusion, environmental validation, and fraud graph detection to accurately detect spoofing attacks while maintaining a fair and user-friendly experience.
